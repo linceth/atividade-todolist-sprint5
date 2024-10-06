@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { FruitContext } from "../../providers/FruitContext";
+import {useContext} from "react";
 
-export const FruitForm = ({addFruit}) => {
+export const FruitForm = () => {
+    const{addFruit} = useContext(FruitContext);
     const [name, setName] = useState("");
     const [price, setPrice] = useState("");
 
